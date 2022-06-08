@@ -1,0 +1,7 @@
+{
+  "name": "SITApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
