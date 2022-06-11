@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <img src="../../assets/images/slide1.png" />
+          <h2>Viaja <br> sin complicaciones</h2>
+          <p>
+            Obtén información actualizada de rutas, paraderos, estaciones y lugares de recarga.
+          </p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="../../assets/images/slide2.png" />
+          <h2>Recarga desde la <br> app y evita colas</h2>
+          <p>Ahorra tiempo, visualiza tu saldo y recarga con tarjetas de debito, credito, y más.</p>
+          <ion-button (click)="iniciarApp()" [routerLink]="['/tabs/home']" >
+            Empezar
+          </ion-button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

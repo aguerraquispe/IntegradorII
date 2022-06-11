@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         path: 'tarjetas',
         loadChildren: () => import('../../tarjetas/tarjetas.module').then(m => m.TarjetasPageModule)
+      },
+      {
+        path: 'rutas',
+        loadChildren: () => import('../../rutas/rutas.module').then(m => m.RutasPageModule)
       }
     ]
   }
