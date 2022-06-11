@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() { }
 
+
+  buscar(event) {
+    console.log(event);
+  }
+
+  option = {
+    slidesPerView: 1.5,
+    centeredSlides: true
+  }
 }

@@ -1,20 +1,150 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Inicio
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="homeContent">
+  <div class="container">
+    <!-- menu de buscar -->
+    <div class="home_search">
+      <ion-searchbar animated placeholder="Hola, ¿Qué hacemos hoy?" (ionChange)="buscar($event)" [debounce]="250">
+      </ion-searchbar>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- atajos -->
+    <div class="home_atajos">
+      <section>
+        <p>Atajos</p>
+        <ion-grid fixed class="grid_atajos">
+          <ion-row>
+            <ion-col size="3">
+              <ion-button>
+                <ion-icon name="card-outline"></ion-icon>
+              </ion-button>
+              <ion-text>
+                <p>Recarga</p>
+              </ion-text>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button>
+                <ion-icon name="navigate-outline"></ion-icon>
+              </ion-button>
+              <ion-text>
+                <p>Rutas</p>
+              </ion-text>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button>
+                <ion-icon name="car-sport-outline"></ion-icon>
+              </ion-button>
+              <ion-text>
+                <p>Tarifas</p>
+              </ion-text>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button>
+                <ion-icon name="information-circle-outline"></ion-icon>
+              </ion-button>
+              <ion-text>
+                <p>Informes</p>
+              </ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </section>
+    </div>
+
+    <!-- mis tarjetas -->
+    <div class="home_cards">
+      <section>
+        <p>Mis tarjetas</p>
+
+        <ion-slides class="ion-slides-content" [option]="option">
+          <ion-slide>
+            <ion-card>
+              <h3>GENERAL</h3>
+              <div class="saldo">
+                <p class="disponible">S/17.09</p>
+                <p class="saldotexto">Saldo disponible</p>
+              </div>
+              <div class="propietario">
+                <span>David Robles</span>
+              </div>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <h3>ESCOLAR</h3>
+              <div class="saldo">
+                <p class="disponible">S/7.09</p>
+                <p>Saldo disponible</p>
+              </div>
+              <div class="propietario">
+                <span>Abel Guerra</span>
+              </div>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+              <h3>ALTERNATIVO</h3>
+              <div class="saldo">
+                <p class="disponible">S/17.09</p>
+                <p>Saldo disponible</p>
+              </div>
+              <div class="propietario">
+                <span>David Robles</span>
+              </div>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </section>
+    </div>
+
+    <!-- notificaciones -->
+    <div class="home_notifications">
+      <section>
+        <p>Notificaciones</p>
+
+        <ion-list>
+          <ion-item>
+            <div class="item-notification">
+              <div class="notificationAlertType">
+                <img src="../../assets/images/alert1.png" alt="">
+              </div>
+              <div class="notificationInfo">
+                <div class="notificationText">
+                  <p>Se presentan retrasos en las estaciones Tomas Valle y Javier Prado con sentido de sur a norte. </p>
+                </div>
+                <div class="notificationTime">
+                  <span>Hace 14 min</span>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <div class="item-notification">
+              <div class="notificationAlertType">
+                <img src="../../assets/images/alert2.png" alt="">
+              </div>
+              <div class="notificationInfo">
+                <div class="notificationText">
+                  <p>Afilia tu tarjeta al debito automatico y olvidate de las recargas. Afiliate con tus tarjetas de
+                    crédito o débito.</p>
+                </div>
+                <div class="notificationTime">
+                  <span>Hace 44 min</span>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </section>
+    </div>
   </div>
 </ion-content>

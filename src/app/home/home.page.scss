@@ -1,27 +1,85 @@
-#container {
-  text-align: center;
+.homeContent {
+  .container {
+    padding: 20px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+    .home_search {
+      ion-searchbar {
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: 30px;
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+        .searchbar-input {
+          border-radius: 10px !important;
+          border: 1px solid #000000;
+        }
+      }
+    }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+    .home_atajos {
+      .grid_atajos {
+        text-align: center;
+      }
+    }
 
-  color: #8c8c8c;
+    .home_cards {
+      position: relative;
 
-  margin: 0;
-}
+      .ion-slides-content {
+        ion-card {
+          background-color: #004c97e5;
+          width: 230px;
+          padding: 15px;
+          text-align: left;
+          color: #ffffff;
 
-#container a {
-  text-decoration: none;
+          h3 {
+            font-size: 15px;
+            margin: inherit;
+          }
+
+          .saldo {
+            .disponible {
+              font-size: 25px;
+              margin-top: 10px;
+              margin-bottom: inherit;
+            }
+            .saldotexto {
+              margin: inherit;
+              font-size: 14px;
+            }
+          }
+
+          .propietario {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .home_notifications {
+      ion-item {
+        .item-notification {
+          background: #f7f7f7;
+          border-radius: 10px;
+          padding: 20px;
+          display: grid;
+          grid-template-columns: 18% 82%;
+          justify-content: center;
+          align-items: center;
+          .notificationText {
+            p{
+              margin-bottom: inherit;
+            }
+          }
+          .notificationTime {
+            span {
+              font-size: 14px;
+              color: #c2c3c0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

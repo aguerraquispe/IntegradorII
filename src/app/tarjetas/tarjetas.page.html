@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mis Tarjetas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container" [fullscreen]="true" class="tarjetasContent">
+    <div class="container">
+      <!-- mis tarjetas -->
+      <div class="home_cards">
+        <section>
+          <p>Mis tarjetas</p>
+
+          <ion-slides class="ion-slides-content" [option]="option">
+            <ion-slide>
+              <div>
+                <ion-card>
+                  <h3>GENERAL</h3>
+                  <div class="saldo">
+                    <p class="disponible">S/17.09</p>
+                    <p class="saldotexto">Saldo disponible</p>
+                  </div>
+                  <div class="propietario">
+                    <span>David Robles</span>
+                  </div>
+                </ion-card>
+
+                <ion-button (click)="recargar()" expand="block">
+                  Recargar
+                </ion-button>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div>
+                <ion-card>
+                  <h3>ESCOLAR</h3>
+                  <div class="saldo">
+                    <p class="disponible">S/7.09</p>
+                    <p>Saldo disponible</p>
+                  </div>
+                  <div class="propietario">
+                    <span>Abel Guerra</span>
+                  </div>
+                </ion-card>
+
+                <ion-button (click)="recargar()" expand="block">
+                  Recargar
+                </ion-button>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div>
+                <ion-card>
+                  <h3>ALTERNATIVO</h3>
+                  <div class="saldo">
+                    <p class="disponible">S/17.09</p>
+                    <p>Saldo disponible</p>
+                  </div>
+                  <div class="propietario">
+                    <span>David Robles</span>
+                  </div>
+                </ion-card>
+
+                <ion-button (click)="recargar()" expand="block">
+                  Recargar
+                </ion-button>
+              </div>
+            </ion-slide>
+          </ion-slides>
+        </section>
+      </div>
+
+      <!-- tarifario -->
+
+      <div class="tarjeta_tarifario">
+        <p>Tarifario</p>
+        <ion-list>
+          <ion-item>
+            <div class="tarifarioContent">
+              <div class="auto">
+                <img src="../../assets/images/car1.png" alt="">
+              </div>
+              <div class="autoNombre">
+                <p>Metropolitano</p>
+              </div>
+              <div class="autoPrecio">
+                <p>S/1. 50</p>
+              </div>
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <div class="tarifarioContent">
+              <div class="auto">
+                <img src="../../assets/images/car1.png" alt="">
+              </div>
+              <div class="autoNombre">
+                <p>Metro</p>
+              </div>
+              <div class="autoPrecio">
+                <p>S/1. 50</p>
+              </div>
+            </div>
+          </ion-item>
+
+          <ion-item>
+            <div class="tarifarioContent">
+              <div class="auto">
+                <img src="../../assets/images/car1.png" alt="">
+              </div>
+              <div class="autoNombre">
+                <p>Corredores</p>
+              </div>
+              <div class="autoPrecio">
+                <p>S/1.50</p>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+.tarjetasContent {
+    .container {
+        padding: 20px;
+    }
+}
+
+.home_cards {
+    position: relative;
+
+    .ion-slides-content {
+        ion-card {
+            background-color: #004c97e5;
+            width: 230px;
+            padding: 15px;
+            text-align: left;
+            color: #ffffff;
+
+            h3 {
+                font-size: 15px;
+                margin: inherit;
+            }
+
+            .saldo {
+                .disponible {
+                    font-size: 25px;
+                    margin-top: 10px;
+                    margin-bottom: inherit;
+                }
+                .saldotexto {
+                    margin: inherit;
+                    font-size: 14px;
+                }
+            }
+
+            .propietario {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.tarjeta_tarifario {
+    ion-item {
+        .tarifarioContent {
+            position: relative;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
