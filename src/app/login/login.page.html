@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="loginContent">
+      <img src="../../assets/images/slide1.png" />
+
+      <form [formGroup]="loginForm" class="loginFormContent">
+        <div>
+          <label for="usuario">Usuario</label>
+          <input name="usuario" type="text" required>
+        </div>
+
+        <div>
+          <label for="password">Contraseña</label>
+          <input name="password" type="password" required>
+        </div>
+
+        <div>
+          <button type="submit" [routerLink]="['/tabs/home']">INGRESAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

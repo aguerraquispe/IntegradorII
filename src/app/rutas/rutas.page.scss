@@ -1,0 +1,12 @@
+.container{
+   padding: inherit;
+}
+
+ion-content {
+    .bgMapa{
+        height: 100vh;
+        background: url('../../assets/images/maps.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}

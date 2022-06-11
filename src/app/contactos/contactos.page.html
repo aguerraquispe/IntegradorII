@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <!-- emergencias -->
+    <div class="contacto_emergecia">
+      <h2>Contactos de Emergencia</h2>
+
+      <ul class="listaEmergencia">
+        <li>
+          <a href="tel:116">
+            <button>Bomberos</button>
+          </a>
+        </li>
+        <li>
+          <a href="tel:105">
+            <button>Central Policial</button>
+          </a>
+        </li>
+        <li>
+          <a href="tel: 911">
+            <button>Central de emergencia</button>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <!-- mandar mensaje -->
+    <div class="contactoMensaje">
+      <h2>Enviar Mensaje</h2>
+
+      <form class="contactoForm">
+
+        <!-- hacer combobox para ATU , alerta, accidente -->
+        <select id="statusContact" name="statusContact">
+          <option value="0" selected hidden>Elegir tipo de mensaje</option>
+          <option value="alerta">Alerta</option>
+          <option value="incidente">Incidente</option>
+          <option value="recomendacion">Recomendacion</option>
+        </select>
+
+        <div>
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto">
+        </div>
+
+        <div>
+          <label for="mensaje">Mensaje</label>
+          <textarea type="text" id="mensaje"></textarea>
+        </div>
+
+        <ion-button (click)="enviado()" expand="block">
+          Enviar
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>
