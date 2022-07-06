@@ -1,5 +1,9 @@
 .listaEmergencia {
     padding: inherit;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+
     li {
         list-style-type: none;
         margin-bottom: 15px;
@@ -9,9 +13,13 @@
                 height: 100%;
                 padding: 15px;
                 border-radius: 5px;
-                background: #76BC43E5;
+                background: #76bc43e5;
                 color: #ffffff;
                 text-transform: uppercase;
+
+                img {
+                    width: 50px;
+                }
             }
         }
     }

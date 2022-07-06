@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Recarga de tarjeta</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="salirRecarga()">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Monto a Recargar </ion-label>
+    <ion-input [formControl]="recargarTarjeta" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button [disabled]="recargarTarjeta.invalid" (click)="guardarRecarga()" expand="block">
+    CONFIRMAR RECARGA
+  </ion-button>
+
+</ion-content>

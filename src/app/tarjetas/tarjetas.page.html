@@ -14,12 +14,14 @@
           <p>Mis tarjetas</p>
 
           <ion-slides class="ion-slides-content" [option]="option">
-            <ion-slide>
-              <div>
-                <ion-card>
-                  <h3>GENERAL</h3>
+
+            <ion-slide *ngFor="let tarjeta of tarjetasMonto">
+              <div>                
+                <ion-card class="{{tarjeta.clase}}">
+                  <h1 hidden>{{tarjeta.id}}</h1>
+                  <h3>{{tarjeta.tipo}}</h3>
                   <div class="saldo">
-                    <p class="disponible">S/17.09</p>
+                    <p class="disponible">S/. {{tarjeta.saldo}}</p>
                     <p class="saldotexto">Saldo disponible</p>
                   </div>
                   <div class="propietario">
@@ -27,49 +29,12 @@
                   </div>
                 </ion-card>
 
-                <ion-button (click)="recargar()" expand="block">
+                <ion-button (click)="recargar(tarjeta)" expand="block">
                   Recargar
                 </ion-button>
               </div>
             </ion-slide>
 
-            <ion-slide>
-              <div>
-                <ion-card>
-                  <h3>ESCOLAR</h3>
-                  <div class="saldo">
-                    <p class="disponible">S/7.09</p>
-                    <p>Saldo disponible</p>
-                  </div>
-                  <div class="propietario">
-                    <span>Abel Guerra</span>
-                  </div>
-                </ion-card>
-
-                <ion-button (click)="recargar()" expand="block">
-                  Recargar
-                </ion-button>
-              </div>
-            </ion-slide>
-
-            <ion-slide>
-              <div>
-                <ion-card>
-                  <h3>ALTERNATIVO</h3>
-                  <div class="saldo">
-                    <p class="disponible">S/17.09</p>
-                    <p>Saldo disponible</p>
-                  </div>
-                  <div class="propietario">
-                    <span>David Robles</span>
-                  </div>
-                </ion-card>
-
-                <ion-button (click)="recargar()" expand="block">
-                  Recargar
-                </ion-button>
-              </div>
-            </ion-slide>
           </ion-slides>
         </section>
       </div>

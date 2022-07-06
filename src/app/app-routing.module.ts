@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
-  },  {
+  },
+  {
     path: 'contactos',
     loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
   },
@@ -38,8 +39,10 @@ const routes: Routes = [
     path: 'recarga',
     loadChildren: () => import('./recarga/recarga.module').then( m => m.RecargaPageModule)
   },
-
-
+  // {
+  //   path: 'modal-tarjeta',
+  //   loadChildren: () => import('./modal-tarjeta/modal-tarjeta.module').then( m => m.ModalTarjetaPageModule)
+  // },
 
 ];
 
