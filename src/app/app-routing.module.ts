@@ -38,7 +38,15 @@ const routes: Routes = [
   {
     path: 'recarga',
     loadChildren: () => import('./recarga/recarga.module').then( m => m.RecargaPageModule)
+  },  {
+    path: 'horario-linea1',
+    loadChildren: () => import('./horario-linea1/horario-linea1.module').then( m => m.HorarioLinea1PageModule)
   },
+  {
+    path: 'tarifas',
+    loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
+  },
+
   // {
   //   path: 'modal-tarjeta',
   //   loadChildren: () => import('./modal-tarjeta/modal-tarjeta.module').then( m => m.ModalTarjetaPageModule)

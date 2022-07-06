@@ -1,0 +1,229 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Horario de Linea1</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="salirRecarga()">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container">
+    <ion-button id="open-modal" expand="block">
+      Estación Bayóvar
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Santa Rosa
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación San Martin
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación San Carlos
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Los Postes
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Los Jardines
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Piràmide del Sol
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Caja de Agua
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Presbítero Maestro
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación El Ángel
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Grau
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Gamarra
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación Arriola
+    </ion-button>
+
+    <ion-button id="open-modal" expand="block">
+      Estación La Cultura
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación San Borja Sur
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Angamos
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Cabitos
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Ayacucho
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Jorge Chávez
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Atocongo
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación San Juan
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación María Auxiliadora
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Villa María
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Pumacahua
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Parque Industrial
+    </ion-button>
+    <ion-button id="open-modal" expand="block">
+      Estación Villa El Salvador
+    </ion-button>
+  </div>
+
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">
+              <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-title>Estación Bayóvar</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        <h3>Destino <b>Bayóvar</b></h3>
+
+        <div class="tren_horarios">
+          <div>
+            <p>05:54:00</p>
+          </div>
+          <div>
+            <p>06:04:00</p>
+          </div>
+          <div>
+            <p>06:14:00</p>
+          </div>
+          <div>
+            <p>06:24:00</p>
+          </div>
+          <div>
+            <p>06:30:00</p>
+          </div>
+          <div>
+            <p>06:36:00</p>
+          </div>
+          <div>
+            <p>06:42:00</p>
+          </div>
+          <div>
+            <p>06:48:00</p>
+          </div>
+          <div>
+            <p>06:54:00</p>
+          </div>
+          <div>
+            <p>06:58:00</p>
+          </div>
+          <div>
+            <p>07:02:00</p>
+          </div>
+          <div>
+            <p>07:06:00</p>
+          </div>
+          <div>
+            <p>07:10:00</p>
+          </div>
+          <div>
+            <p>07:14:00</p>
+          </div>
+          <div>
+            <p>07:18:00</p>
+          </div>
+          <div>
+            <p>07:22:00</p>
+          </div>
+          <div>
+            <p>07:25:00</p>
+          </div>
+          <div>
+            <p>07:28:00</p>
+          </div>
+          <div>
+            <p>07:31:00</p>
+          </div>
+          <div>
+            <p>07:34:00</p>
+          </div>
+          <div>
+            <p>07:37:00</p>
+          </div>
+          <div>
+            <p>07:40:00</p>
+          </div>
+          <div>
+            <p>07:43:00</p>
+          </div>
+          <div>
+            <p>07:46:00</p>
+          </div>
+          <div>
+            <p>07:49:00</p>
+          </div>
+          <div>
+            <p>07:52:00</p>
+          </div>
+          <div>
+            <p>07:555:00</p>
+          </div>
+          <div>
+            <p>07:58:00</p>
+          </div>
+          <div>
+            <p>08:01:00</p>
+          </div>
+          <div>
+            <p>08:04:00</p>
+          </div>
+          <div>
+            <p>08:07:00</p>
+          </div>
+          <div>
+            <p>08:10:00</p>
+          </div>
+        </div>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
