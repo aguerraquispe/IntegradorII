@@ -12,7 +12,11 @@ export class ModalTarjetaPage {
   @Input() id: number;
   @Input() saldo: number;
 
-  recargarTarjeta = new FormControl('', Validators.required);
+  recargarTarjeta = new FormControl('', [
+    Validators.required,
+    Validators.max(50),
+    Validators.min(1)
+  ]);
 
   constructor(
     private modalCtrl: ModalController

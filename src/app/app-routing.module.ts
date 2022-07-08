@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'tarifas',
     loadChildren: () => import('./tarifas/tarifas.module').then( m => m.TarifasPageModule)
   },
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
 
   // {
   //   path: 'modal-tarjeta',

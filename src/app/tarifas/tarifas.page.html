@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tarifas</ion-title>
+    <ion-title>TARIFARIO</ion-title>
 
     <ion-buttons slot="start">
       <ion-button (click)="salirRecarga()">
@@ -11,50 +11,111 @@
 </ion-header>
 
 <ion-content>
-  <div class="contianer">
-    <div class="tarifaLinea1">
-      <h2>Tarias <b>Linea 1</b></h2>
-      <div class="tl_adulto">
-        <p>Pasaje Adulto</p>
+  <div class="container">
+    <div class="tarifa tarifaLinea1">
+      <h2>Tarifa <b>Linea 1</b></h2>
+      <div class="tarifa_info tl_adulto">
+        <p class="pasaje">Pasaje Adulto</p>
+        <div>
+          <p>Dirigido a: Pasajeros en general</p>
 
-        <p>Dirigido a: Pasajeros en general</p>
-
-        <p>S/1.50</p>
+          <p>S/1.50</p>
+        </div>
       </div>
-      <div class="tl_medio">
-        <p>Pasaje Medio</p>
+      <div class="tarifa_info tl_medio">
+        <p class="pasaje">Pasaje Medio</p>
+        <div>
+          <p>Dirigido a: Escolares, universitarios y alumnos de institutos superiores</p>
 
-        <p>Dirigido a: Escolares, universitarios y alumnos de institutos superiores</p>
-
-        <p>S/0.75</p>
+          <p>S/0.75</p>
+        </div>
       </div>
     </div>
 
-    <div class="tarifaMetropolitano">
-      <h2>Tarias <b>Metropolitano</b></h2>
+    <div class="tarifa tarifaMetropolitano">
+      <h2>Tarifa <b>Metropolitano</b></h2>
+      <div class="tarifa_info tm_general">
+        <p class="pasaje">Tarifa General</p>
+        <div>
+          <p>Representa el costo por el uso exclusivo de una vía</p>
 
-      <div class="tm_general">
-        <p>Tarifa General</p>
-
-        <p>Representa el costo por el uso exclusivo de una vía</p>
-
-        <p>S/2.50</p>
+          <p>S/2.50</p>
+        </div>
       </div>
-      <div class="tm_preferencial">
-        <p>Tarifa Preferencial</p>
-
-        <p>Representa el cobro diferenciado por un servicio, y está determinado según el perfil del usuario</p>
-
-        <p>S/1.00 | S/1.25</p>
+      <div class="tarifa_info tm_preferencial">
+        <p class="pasaje">Tarifa Preferencial</p>
+        <div>
+          <p>Representa el cobro diferenciado por un servicio, y está determinado según el perfil del usuario</p>
+          <p>S/1.00 <br> S/1.25</p>
+        </div>
       </div>
-      <div class="tm_integrada">
-        <p>Tarifa Integrada</p>
+      <div class="tarifa_info tm_integrada">
+        <p class="pasaje">Tarifa Integrada</p>
+        <div>
+          <p>Representa el cobro de un servicio mixto, que integra dos o más modalidades de trasportarse de un punto a
+            otro, sin salir del sistema</p>
 
-        <p>Representa el cobro de un servicio mixto, que integra dos o más modalidades de trasportarse de un punto a
-          otro, sin salir del sistema</p>
-
-        <p>S/2.50</p>
+          <p>S/2.50</p>
+        </div>
       </div>
+    </div>
+    <!-- Corredor Azul -->
+    <div class="tarifa tarifaazul">
+      <h2>Tarifa <b>Corredor Azul</b></h2>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa General</p>
+          <p>S/1.80</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Estudiante</p>
+          <p>S/0.90</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Zonal</p>
+          <p>S/1.00</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Zonal estudiante</p>
+          <p>S/0.50</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- Corredor MOrado -->
+    <div class="tarifa tarifamorado">
+      <h2>Tarifas <b>Corredor Morado/Rojo</b></h2>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa General</p>
+          <p>S/2.00</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Estudiante</p>
+          <p>S/1.00</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Zonal</p>
+          <p>S/1.00</p>
+        </div>
+      </div>
+      <div class="tarifa_info tm_general">
+        <div>
+          <p class="pasaje">Tarifa Zonal estudiante</p>
+          <p>S/0.50</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </ion-content>

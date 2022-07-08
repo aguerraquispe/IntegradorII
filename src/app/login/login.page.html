@@ -9,21 +9,31 @@
     <div class="loginContent">
       <img src="../../assets/images/slide1.png" />
 
-      <form [formGroup]="loginForm" class="loginFormContent">
-        <div>
-          <label for="usuario">Usuario</label>
-          <input name="usuario" type="text" required>
-        </div>
+      <form [formGroup]="loginForm">
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" formControlName ="usuario"></ion-input>
+        </ion-item>
 
-        <div>
-          <label for="password">Contraseña</label>
-          <input name="password" type="password" required>
-        </div>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" formControlName ="password"></ion-input>
+        </ion-item>
 
-        <div>
-          <button type="submit" [routerLink]="['/tabs/home']">INGRESAR</button>
-        </div>
+        <ion-button (click)="ingresar()" expand="block">
+          Ingresar
+        </ion-button>
       </form>
     </div>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registrarse']">
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
