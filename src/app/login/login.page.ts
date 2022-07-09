@@ -27,7 +27,16 @@ export class LoginPage implements OnInit {
     var registro = this.loginForm;
     var datos = registro.value;
 
-    if (registro.invalid) {
+    var info = JSON.parse(localStorage.getItem("usuario"));
+    var usuarioKey = info[Object.keys(info)[0]];
+    var passwordKey = info[Object.keys(info)[1]];
+
+    var loginuser = datos.usuario;
+    var loginpass = datos.password;
+
+    if (usuarioKey == loginuser && passwordKey == loginpass) {
+      this.router.navigate(["/tabs/home"]);
+    } else {
       const alert = await this.alertController.create({
         header: 'Inicio de sesión fallida',
         message: 'Los campos no estan completados correctamente',
@@ -36,8 +45,6 @@ export class LoginPage implements OnInit {
 
       await alert.present();
       return;
-    } else {
-      this.router.navigate(["/tabs/home"]);
     }
   }
 }
