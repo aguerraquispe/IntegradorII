@@ -1,8 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, Routes, RouterModule } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-
+import { } from 'mysql';
+import { ApiserviceService } from '../servicios/apiservice.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -10,15 +12,20 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  users: any = [];
+
   public loginForm = new FormGroup({
     usuario: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   })
-
+  resultado: any;
   constructor(
+    public _apiService: ApiserviceService,
     private router: Router,
-    public alertController: AlertController
-  ) { }
+    public alertController: AlertController,
+  ) {
+    this.getUsers();
+  }
 
   ngOnInit() {
   }
@@ -46,5 +53,14 @@ export class LoginPage implements OnInit {
       await alert.present();
       return;
     }
+  }
+
+
+  getUsers() {
+    this._apiService.obtnenerDatos().subscribe((res: any) => {
+      console.log("SUCCESS ===", res);
+    }, (error: any) => {
+      console.log("ERROR ===", error);
+    })
   }
 }

@@ -23,5 +23,7 @@ export class ContactosPage implements OnInit {
 
   enviado(){
     alert("Mensaje enviado correctamente");
+    document.getElementById("asunto").innerHTML = "";
+    document.getElementById("mensaje").innerHTML = "";
   }
 }

@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'registrarse',
     loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
+  {
+    path: 'modal-horario',
+    loadChildren: () => import('./modal-horario/modal-horario.module').then( m => m.ModalHorarioPageModule)
+  },
 
   // {
   //   path: 'modal-tarjeta',

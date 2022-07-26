@@ -8,11 +8,23 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar animated (ionChange)="buscar($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <div class="container">
+  <ion-list class="list__estaciones">
+    <ion-item class="list__estacion" *ngFor="let estacion of estaciones | filtro: textoBuscar: 'nombre'">
+      <ion-button id="open-modal" expand="full">
+        {{estacion.nombre}}
+      </ion-button>
+    </ion-item>  
+  </ion-list>
+
+  <!-- <div class="container">
     <ion-button id="open-modal" expand="block">
       Estación Bayóvar
     </ion-button>
@@ -104,7 +116,7 @@
     <ion-button id="open-modal" expand="block">
       Estación Villa El Salvador
     </ion-button>
-  </div>
+  </div> -->
 
   <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
     <ng-template>
