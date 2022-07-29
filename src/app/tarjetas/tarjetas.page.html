@@ -16,7 +16,7 @@
           <ion-slides class="ion-slides-content" [option]="option">
 
             <ion-slide *ngFor="let tarjeta of tarjetasMonto">
-              <div>                
+              <div>
                 <ion-card class="{{tarjeta.clase}}">
                   <h1 hidden>{{tarjeta.id}}</h1>
                   <h3>{{tarjeta.tipo}}</h3>
@@ -25,13 +25,30 @@
                     <p class="saldotexto">Saldo disponible</p>
                   </div>
                   <div class="propietario">
-                    <span>David Robles</span>
+                    <span>{{tarjeta.propietario}}</span>
                   </div>
                 </ion-card>
 
-                <ion-button (click)="recargar(tarjeta)" expand="block">
+                <ion-button (click)="recargar(tarjeta)" expand="block" class="{{tarjeta.tipo}}">
                   Recargar
                 </ion-button>
+              </div>
+
+              <div class="historialTarjeta">
+                <h4>Últimos movimientos</h4>
+                <ion-list *ngFor="let movimiento of tarjeta.movimientos">
+                  <ion-item>
+                    <div class="movContent">
+                      <div class="movInfo">
+                        <p class="tipoMov">{{movimiento.tipo}}</p>
+                        <p class="fechaMov">{{movimiento.fecha}} - {{movimiento.hora}}</p>
+                      </div>
+                      <div class="movEfectivo {{movimiento.clase}}">
+                        <p>S/ {{movimiento.monto}}</p>
+                      </div>
+                    </div>
+                  </ion-item>
+                </ion-list>
               </div>
             </ion-slide>
 

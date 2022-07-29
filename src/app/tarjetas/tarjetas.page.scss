@@ -8,15 +8,22 @@
     position: relative;
 
     .ion-slides-content {
+        ion-slide {
+            display: block;
+            padding: 0 15px;
+        }
         ion-card {
-            background-color: #004c97e5;
-            width: 230px;
-            padding: 15px;
+            background-color: #fff;
+            width: 100%;
+            padding: 10px 20px;
             text-align: left;
-            color: #ffffff;
+            color: #004c97;
+            border: 2px solid #004c97;
+            margin: auto;
 
-            &.tarjeta_alternativa{
-                background-color: #76bc43e5;
+            &.tarjeta_alternativa {
+                color: #76bc43e5;
+                border: 2px solid #76bc43e5;
             }
 
             h3 {
@@ -26,18 +33,63 @@
 
             .saldo {
                 .disponible {
-                    font-size: 25px;
-                    margin-top: 10px;
+                    font-size: 30px;
+                    margin-top: 5px;
                     margin-bottom: inherit;
+                    font-weight: bold;
                 }
                 .saldotexto {
                     margin: inherit;
                     font-size: 14px;
+                    line-height: 0;
                 }
             }
 
             .propietario {
                 margin-top: 15px;
+            }
+        }
+
+        //ULTIMOS MOVIMIENTOS
+        .historialTarjeta {
+            h4 {
+                text-align: left;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            .movContent {
+                display: grid;
+                grid-template-columns: 65% 35%;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                
+                .movInfo {
+                    position: relative;
+                    display: block;
+                    line-height: 10px;
+
+                    .tipoMov{
+                        font-weight: bold;
+                    }
+
+                    .fechaMov{
+                        color: #354753;
+                        font-size: 12px;
+                    }
+                }
+                .movEfectivo{
+                    font-weight: bold;
+                    text-align: right;
+
+                    &.plusEfectivo{
+                        color: #00C371;
+                    }
+
+                    &.restEfectivo{
+                        color: #D92802;
+                    }
+                }
             }
         }
     }

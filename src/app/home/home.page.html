@@ -9,46 +9,46 @@
 <ion-content [fullscreen]="true" class="homeContent">
   <div class="container">
     <!-- menu de buscar -->
-    <div class="home_search">
+    <!-- <div class="home_search">
       <ion-searchbar animated placeholder="Hola, ¿Qué hacemos hoy?" (ionChange)="buscar($event)" [debounce]="250">
       </ion-searchbar>
-    </div>
+    </div> -->
 
     <!-- atajos -->
     <div class="home_atajos">
       <section>
-        <p>Atajos</p>
+        <p class="home_title">Atajos</p>
         <ion-grid fixed class="grid_atajos">
           <ion-row>
-            <ion-col size="3">
+            <!-- <ion-col size="3">
               <ion-button>
                 <ion-icon name="bus-outline"></ion-icon>
               </ion-button>
               <ion-text>
                 <p>Horarios Corredor</p>
               </ion-text>
-            </ion-col>
-            <ion-col size="3">
-              <ion-button (click)="horarioLine1()">
+            </ion-col> -->
+            <ion-col size="4">
+              <ion-button class="btn_hora_linea1" (click)="horarioLine1()">
                 <ion-icon name="train-outline"></ion-icon>
               </ion-button>
-              <ion-text>
+              <ion-text class="txt_hora_linea">
                 <p>Horarios Linea 1</p>
               </ion-text>
             </ion-col>
-            <ion-col size="3">
-              <ion-button (click)="tarifario()">
+            <ion-col size="4">
+              <ion-button class="btn_tarifa" (click)="tarifario()">
                 <ion-icon name="car-sport-outline"></ion-icon>
               </ion-button>
-              <ion-text>
+              <ion-text class="txt_tarifa">
                 <p>Tarifas</p>
               </ion-text>
             </ion-col>
-            <ion-col size="3">
-              <ion-button>
+            <ion-col size="4">
+              <ion-button class="btn_hora_metropol">
                 <ion-icon name="time-outline"></ion-icon>
               </ion-button>
-              <ion-text>
+              <ion-text class="txt_hora_metropol">
                 <p>Horarios Metrop.</p>
               </ion-text>
             </ion-col>
@@ -60,7 +60,7 @@
     <!-- mis tarjetas -->
     <div class="home_cards">
       <section>
-        <p>Mis tarjetas</p>
+        <p class="home_title">Mis tarjetas</p>
 
         <ion-slides class="ion-slides-content" [option]="option">
           <ion-slide>
@@ -95,7 +95,7 @@
     <!-- notificaciones -->
     <div class="home_notifications">
       <section>
-        <p>Notificaciones</p>
+        <p class="home_title">Notificaciones</p>
 
         <ion-list>
           <ion-item>

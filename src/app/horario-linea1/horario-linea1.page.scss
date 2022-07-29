@@ -1,19 +1,14 @@
-.tren_horarios {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    text-align: center;
-    border: 2px solid #76bc43e5;
-    border-radius: 15px;
-    overflow: hidden;
+.list__estacion {
+    margin-bottom: 10px;
 
-    div{
-        border: 1px solid #76bc43e5;
-    }
-}
-
-
-.list__estacion{
-    ion-button{
+    ion-button {
         width: 100%;
+        height: 100%;
+
+        span.ion_text_left {
+            margin-right: auto;
+            font-weight: bold;
+            font-size: 14px;
+        }
     }
 }

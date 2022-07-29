@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>modal-horario</ion-title>
+    <ion-title>{{estacion}}</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="retornar()">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+  <div class="tren_horarios">
+    <div *ngFor="let hora of horariosLinea1">
+      <p>{{hora.hora}}</p>
+    </div>
+  </div>
 </ion-content>

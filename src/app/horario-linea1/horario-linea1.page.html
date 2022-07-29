@@ -18,10 +18,11 @@
 
   <ion-list class="list__estaciones">
     <ion-item class="list__estacion" *ngFor="let estacion of estaciones | filtro: textoBuscar: 'nombre'">
-      <ion-button id="open-modal" expand="full">
-        {{estacion.nombre}}
+      <ion-button expand="block" (click)="verHorarioModal(estacion.nombre)">
+        <span class="ion_text_left">{{estacion.nombre}}</span>
+        <ion-icon name="train-outline"></ion-icon>
       </ion-button>
-    </ion-item>  
+    </ion-item>
   </ion-list>
 
   <!-- <div class="container">
@@ -118,7 +119,7 @@
     </ion-button>
   </div> -->
 
-  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <!-- <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <ion-header>
         <ion-toolbar>
@@ -143,6 +144,6 @@
 
       </ion-content>
     </ng-template>
-  </ion-modal>
+  </ion-modal> -->
 
 </ion-content>

@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http"
 import { PipesModule } from './pipes/pipes.module';
-
+import { DatePipe } from '@angular/common'
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -23,7 +23,7 @@ import { PipesModule } from './pipes/pipes.module';
     PipesModule,
     HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

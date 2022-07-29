@@ -27,7 +27,8 @@ export class ModalTarjetaPage {
   }
 
   guardarRecarga() {
+    const montoAgregado = this.recargarTarjeta.value;
     const nuevoSaldo = this.saldo + this.recargarTarjeta.value;
-    this.modalCtrl.dismiss(nuevoSaldo, 'recargaRealizada');
+    this.modalCtrl.dismiss({ montoAgregado, nuevoSaldo }, 'recargaRealizada');
   }
 }

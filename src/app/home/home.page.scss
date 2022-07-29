@@ -2,23 +2,51 @@
   .container {
     padding: 20px;
 
-    .home_search {
-      ion-searchbar {
-        padding-left: inherit;
-        padding-right: inherit;
-        padding-top: inherit;
-        padding-bottom: 30px;
-
-        .searchbar-input {
-          border-radius: 10px !important;
-          border: 1px solid #000000;
-        }
-      }
-    }
-
     .home_atajos {
       .grid_atajos {
         text-align: center;
+
+        ion-button {
+          width: 70px;
+          height: 70px;
+
+          &.btn_hora_linea1 {
+            --background: #46942b;
+
+            ion-icon {
+              color: #f2f2f2;
+            }
+          }
+          &.btn_tarifa {
+            --background: #fee5cd;
+            ion-icon {
+              color: #307fe2;
+            }
+          }
+          &.btn_hora_metropol {
+            --background: #d4f7f4;
+            ion-icon {
+              color: #753bbd;
+            }
+          }
+          ion-icon {
+            font-size: 40px;
+          }
+        }
+
+        ion-text {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 1;
+
+          &.txt_hora_linea {
+          }
+          &.txt_tarifa {
+          }
+          &.txt_hora_metropol {
+          }
+        }
       }
     }
 
@@ -27,14 +55,15 @@
 
       .ion-slides-content {
         ion-card {
-          background-color: #004c97e5;
+          background-color: #fff;
           width: 230px;
           padding: 15px;
-          text-align: left;
-          color: #ffffff;
+          text-align: center;
+          color: #004C97;
+          border: 2px solid #000;
 
           h3 {
-            font-size: 15px;
+            font-size: 25px;
             margin: inherit;
           }
 
@@ -68,7 +97,7 @@
           justify-content: center;
           align-items: center;
           .notificationText {
-            p{
+            p {
               margin-bottom: inherit;
             }
           }
@@ -80,6 +109,12 @@
           }
         }
       }
+    }
+
+    //GENERAL CHANGES
+    .home_title {
+      font-size: 20px;
+      font-weight: bold;
     }
   }
 }
